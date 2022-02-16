@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- <div class="stats-container">
+
+  </div> -->
+  <div class="game-container">
+    <div class="bird">
+      <img src="bird.gif" alt="">
+    </div>
+  </div>
+
+  <script>
+      const birdEl = document.querySelector('.bird')
+      let increment = 66    
+      let transformX = 0
+
+        setInterval(() => {
+            transformX = transformX + 2*increment
+            birdEl.style.transform = 'translate(0,'+transformX+'px)'
+            console.log(transformX)
+        },200)
+
+      document.onkeydown = (e) => {
+          console.log(e.key)
+        if (e.key = " "){
+            transformX = transformX - 4*increment
+            birdEl.style.transform = 'translate(0,'+transformX+'px)'
+            // setTimeout(() => {
+            //     transformX = transformX + 2*increment
+            //     birdEl.style.transform = 'translate(0,'+transformX+'px)'
+            // },400)
+        }
+      }
+  </script>
+</body>
+</html>
